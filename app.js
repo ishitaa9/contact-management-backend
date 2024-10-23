@@ -14,11 +14,8 @@ app.use(morgan("tiny"));
 app.use(require("cors")());
 
 // routes
-app.get('/', (req, res) => {
-  res.send('Welcome to the homepage!');
-});
 app.use("/api", require("./routes/auth"));
-// app.use("/api", require("./routes/contact"));
+app.use("/api", require("./routes/contact"));
 
 // server configurations.
 const PORT = process.env.PORT || 8000;
